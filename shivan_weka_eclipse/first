@@ -1,0 +1,15 @@
+import weka.core.Instances;
+import weka.experiment.InstanceQuery;
+
+DataSource source = new DataSource("/c/Code Jam 2013/sample_input.csv");
+Instances data = source.getDataSet();
+
+
+java \
+     weka.filters.supervised.attribute.AddClassification \
+     -serialized /some/where/j48.model \
+     -classification \
+     -remove-old-class \
+     -i train.arff \
+     -o train_classified.arff \
+     -c last
