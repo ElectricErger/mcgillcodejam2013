@@ -7,12 +7,12 @@
          metadata-complete="false">
 
          <servlet>
-                  <servlet-name>health</servlet-name>
-                  <jsp-file>/health.jsp</jsp-file>
+                  <servlet-name>Viewer</servlet-name>
+                  <jsp-file>/Home.jsp</jsp-file>
          </servlet>
          <servlet-mapping>
-                  <servlet-name>health</servlet-name>
-                  <url-pattern>/health</url-pattern>
+                  <servlet-name>Viewer</servlet-name>
+                  <url-pattern>/codejam/Viewer</url-pattern>
          </servlet-mapping>
          
 </web-app>
