@@ -8,7 +8,7 @@
 
          <servlet>
                   <servlet-name>Viewer</servlet-name>
-                  <jsp-file>/Home.jsp</jsp-file>
+                  <servlet-class>Viewer</servlet-class>
          </servlet>
          <servlet-mapping>
                   <servlet-name>Viewer</servlet-name>

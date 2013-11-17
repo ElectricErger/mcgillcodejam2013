@@ -5,9 +5,6 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-/**
- * Servlet implementation class Viewer
- */
 @WebServlet("/Viewer")
 public class Viewer extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -34,7 +31,8 @@ public class Viewer extends HttpServlet {
 				out.println("<FONT COLOR='green'>");
 				out.println("<body background='"+ request.getContextPath() + "/image/FDR.jpg'>");
 				out.print("<p>");
-				for(int i = 0; i<3; i++){
+				out.print("<p>" + request.getContextPath() + "</p>");
+				for(int i = 0; i<7; i++){
 					out.print("<p>");
 					out.print("message");
 					out.print("</p>");
