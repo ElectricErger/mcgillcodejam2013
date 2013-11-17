@@ -30,14 +30,18 @@ public class Viewer extends HttpServlet {
 				out.println("<html>");
 				out.println("<FONT COLOR='green'>");
 				out.println("<body background='"+ request.getContextPath() + "/image/FDR.jpg'>");
-				out.print("<p>");
 				out.print("<p>" + request.getContextPath() + "</p>");
 				for(int i = 0; i<7; i++){
 					out.print("<p>");
 					out.print("message");
 					out.print("</p>");
 				}
-				out.println("</p>");
+				out.println("<form action='upload' method='post' enctype='multipart/form-data'>");
+			    out.println("<input type='text' name='description' />");
+			    out.println("<input type='file' name='file' />");
+			    out.println("<input type='submit' />");
+			    out.println("</form>");
+			    
 				out.println("<h1>" + message2 + "</h1>");
 				out.println("</body>");
 				out.println("</FONT>");
