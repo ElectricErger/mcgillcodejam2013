@@ -1,35 +1,26 @@
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.URL;
-import java.util.Vector;
-
 import weka.core.converters.*;
-import weka.classifiers.Classifier;
 import weka.classifiers.misc.SerializedClassifier;
 import weka.core.Instances;
-import weka.core.DenseInstance;
-import weka.core.SerializationHelper;
 
 
 
 public class second {
 	
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException, Exception{
 		System.out.println(learn("/home/max/Desktop/codejam/simple_input.csv"));
 	}
 
-	public static URL learn(URL url) throws Exception, IOException {
+	public static String learn(String string) throws Exception, IOException {
 		//Current location:
 		File directory = new File (".");
 		
-		CSVLoader loader = new CSVLoader(url);
+		CSVLoader loader = new CSVLoader();
 
-			loader.setSource(new File());
+		loader.setSource(new File(string));
 		loader.setDateAttributes("1");
 		loader.setDateFormat("yyyy-MM-dd'T'HH:mm-ss':00'");
 		loader.setMissingValue("null");
